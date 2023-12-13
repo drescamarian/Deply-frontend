@@ -1,0 +1,251 @@
+@import "../../../styles/_variables.scss";
+// $bg-color: #424242;
+$hl-color: $green;
+$muted-color: #000;
+$trans-time: 300ms;
+
+
+.register-Orga-User-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .info_card {
+    width: 40%;
+    margin-top: 2rem;
+    margin: 0 3.8vw;
+    color: #1f1f1f;
+
+    h1 {
+
+      text-align: left;
+      font-size: 3em;
+      color: #252525;
+      line-height: 2.5rem;
+    }
+
+    p {
+      margin-top: 2rem;
+      text-align: left;
+      font-size: 1.4em;
+      line-height: 1.8rem;
+    }
+
+    .redirect {
+      margin-top: 1.8rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+
+      p {
+        padding-top: 20px;
+      }
+
+      a {
+        display: flex;
+        color: $text_color_light;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: 500;
+        margin-left: 2em;
+        background-color: #495a6a;
+        padding: 1.1em 1em;
+        border-radius: 8px;
+        transition: 0.3s;
+        height: 2em;
+        width: max-content;
+        margin-top: 2.5rem;
+
+        &:hover {
+          color: rgb(43, 43, 43);
+          background-color: $green;
+        }
+
+        align-items: center;
+      }
+    }
+  }
+
+  .register-Orga-User-Form {
+    width: 45em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 7%;
+
+    h2 {
+      color: #c0d3dd;
+      font-weight: 500;
+      margin-bottom: 0.3em;
+    }
+
+    .input {
+      width: 100%;
+      gap: 1em;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      margin: 1em 0;
+
+      div.inputs-column {
+        width: 100%;
+        margin: 0 1em;
+
+        input {
+          width: 100%
+        }
+      }
+    }
+
+
+
+    .group {
+      position: relative;
+      // margin: 1.7em 1em;
+      margin: 1.7em auto;
+      align-items: center;
+    }
+
+    // INPUTS // ============================== //
+    .highlight {
+      display: block;
+      background-color: #c0d3dd;
+      color: $hl-color;
+      width: 100%;
+      height: 1px;
+    }
+
+    input,
+    textarea {
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      border-radius: 0;
+      border-bottom: 0;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus~label,
+      &:valid~label {
+        top: -14px;
+        font-size: 12px;
+        color: $green;
+      }
+
+      &:focus~.bar:before {
+        width: 100%;
+      }
+    }
+
+    input[type="password"] {
+      letter-spacing: 0.3em;
+    }
+
+    label {
+      color: #c0d3dd;
+      font-size: 16px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 10px;
+      transition: $trans-time ease all;
+    }
+
+    .bar {
+      position: relative;
+      display: block;
+      width: 100%;
+
+      &:before {
+        content: "";
+        height: 2px;
+        width: 0;
+        bottom: 0px;
+        position: absolute;
+        background: $hl-color;
+        transition: $trans-time ease all;
+        left: 0%;
+      }
+    }
+
+    button {
+      background-color: $green;
+      color: #3f3f3f;
+      border: none;
+      border-radius: 5px;
+      margin: 1.6em 0 0em 0;
+      padding: 8px 15px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: $green;
+      opacity: 0.6;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+    }
+
+    bottom[disabled] {
+      cursor: not-allowed;
+    }
+
+    .login-hinweis {
+      color: $hl-color;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+      margin: 2em 0;
+
+      a {
+        margin-left: 1em;
+        text-decoration: none;
+        color: #c0d3dd;
+        font-weight: 500;
+      }
+
+      a:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .register-Orga-User-section {
+    flex-direction: column;
+
+    .info_card {
+      width: 100vw;
+      margin-left: 2.5vw;
+
+      h1 {
+        font-size: 3em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .redirect {
+        flex-direction: column;
+      }
+    }
+
+    .register-Orga-User-Form {
+      max-width: 95vw;
+      margin-top: 3%;
+
+      .input {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  }
+}

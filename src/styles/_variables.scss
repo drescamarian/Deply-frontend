@@ -1,0 +1,135 @@
+//------------------ Font-Import aus asset-Ordner -------------------
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/Inter-Bold.eot');
+    src: url('../assets/fonts/Inter/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Inter/Inter-Bold.woff2') format('woff2'),
+        url('../assets/fonts/Inter/Inter-Bold.woff') format('woff'),
+        url('../assets/fonts/Inter/Inter-Bold.ttf') format('truetype'),
+        url('../assets/fonts/Inter/Inter-Bold.svg#Inter-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/Inter-SemiBold.eot');
+    src: url('../assets/fonts/Inter/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Inter/Inter-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/Inter/Inter-SemiBold.woff') format('woff'),
+        url('../assets/fonts/Inter/Inter-SemiBold.ttf') format('truetype'),
+        url('../assets/fonts/Inter/Inter-SemiBold.svg#Inter-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/Inter-Medium.eot');
+    src: url('../assets/fonts/Inter/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Inter/Inter-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Inter/Inter-Medium.woff') format('woff'),
+        url('../assets/fonts/Inter/Inter-Medium.ttf') format('truetype'),
+        url('../assets/fonts/Inter/Inter-Medium.svg#Inter-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/Inter-Regular.eot');
+    src: url('../assets/fonts/Inter/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Inter/Inter-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Inter/Inter-Regular.woff') format('woff'),
+        url('../assets/fonts/Inter/Inter-Regular.ttf') format('truetype'),
+        url('../assets/fonts/Inter/Inter-Regular.svg#Inter-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/');
+    src: url('../assets/fonts/Inter/Inter-Light.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Inter/Inter-Light.woff2') format('woff2'),
+        url('../assets/fonts/Inter/Inter-Light.woff') format('woff'),
+        url('../assets/fonts/Inter/Inter-Light.ttf') format('truetype'),
+        url('../assets/fonts/Inter/Inter-Light.svg#Inter-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alumni Sans';
+    src: url('../assets/fonts/Alumni/AlumniSans-Bold.eot');
+    src: url('../assets/fonts/Alumni/AlumniSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Alumni/AlumniSans-Bold.woff2') format('woff2'),
+        url('../assets/fonts/Alumni/AlumniSans-Bold.woff') format('woff'),
+        url('../assets/fonts/Alumni/AlumniSans-Bold.ttf') format('truetype'),
+        url('../assets/fonts/Alumni/AlumniSans-Bold.svg#AlumniSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+// ----------------- Color Options ------------------
+
+// ---- dark grey ----
+// $bg_color: #acb8c3;  //Hintergrundfarbe der Seite
+// $green: #9ffd2c;    // Neon Akzentfarbe
+// $second_color: #495a6a; //Hintergrundfarbe für Buttons und anderes
+// $logo_font_color: #a2b0bd; // Fontfarbe im Neon Punkt
+// $nav_font_hover: #c5d3e0;  // Fontfarbe in den Buttons bei Hover
+
+// ---- grey ----
+// $bg_color: #c6d1dd;
+// $green: #a7ff1a;
+// $second_color: #576877;
+// $logo_font_color: #b5c7d1;
+// $nav_font_hover: #e3ebf1;
+
+// ---- ligthtergrey ----
+$bg_color: #dae4ee;
+$text_color_light: #c0d3dd;
+$green: #bbff4c;
+$second_color: #576877;
+$logo_font_color: #b5c7d1;
+$nav_font_hover: #e3ebf1;
+
+
+// ---- light grey ----
+// $bg_color: #dce2e7;
+// $green: #baff1a;
+// $second_color: #949ea8;
+// $logo_font_color: #dee3e6;
+// $nav_font_hover: #e3ebf1;
+
+
+// ---- light beige ----
+// $bg_color: #d0d3d6;
+// $green: #a7ff1a;
+// $second_color: #868e96;
+// $logo_font_color: #b8c7d4;
+// $nav_font_hover: #dce2e7;
+
+
+// ---- dark mode ----
+// $bg_color: #d0d3d6;
+// $green: #a7ff1a;
+// $second_color: #868e96;
+// $logo_font_color: #b8c7d4;
+// $nav_font_hover: #dce2e7;
+
+
+// --------------------- Fonts ----------------------
+$main_font: 'Inter', sans-serif;
+$logo_font: 'Alumni Sans', sans-serif;
+// ---------------------  LayOut  ----------------------
+
+$inputWidth: 100%;

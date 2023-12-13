@@ -1,0 +1,432 @@
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $main_font;
+}
+
+html {
+  background-color: $bg_color;
+}
+.confirm__element{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: $bg_color;  
+  // color: $text_color_light;
+  font-family: $main_font;
+  font-weight: 400;
+  font-size: 1em;  
+  text-align: center;
+  padding: 0 1em;
+
+  h2 {
+    font-size: 2em;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 1em;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  div{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  button {
+    border: 1px solid #313131;
+    border-radius: 7px;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+    // line-height: 1em;
+    // width: 8em;
+    // height: 2.7em;
+    background-color: $bg-color;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem 1.1rem;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $second_color;
+      color: $nav_font_hover;
+    }
+  }  
+}
+}
+
+@media (prefers-color-scheme: dark) {
+  $bg_dark_color: #161616;
+  $text_dark_color: #c0d3dd;
+  $bg_cards_dark_color: #242424;
+  $bg_calendar_dark_hover: #575656;
+  $bg_calendar_dark_selected: #a7a7a7;
+  $bg_dark_color_pagination: #c91818;
+  $bg_dark_thead: #242424;
+  $bg_dark_tbody_odd: #2c2c2c;
+  $bg_dark_tbody_even: #242424;
+  $bg_dark_button: #161616;
+  $text_dark_border_color: #fff;
+
+  html {
+    background-color: $bg_dark_color;
+  }
+
+  .confirm__element{
+    background-color: $bg_dark_color;
+    
+    h2 {
+      color: $text_dark_color;      
+    }
+
+    div{
+      button {
+        color: $text_dark_color;
+        background-color: $bg_dark_button;
+        border: 1px solid $text_dark_border_color;
+      }
+    }
+  }
+
+
+  .app {
+    header {
+      background-color: $bg_dark_color;
+      color: $text_dark_color;
+
+      .logo {
+        .first__line {
+          h1 {
+            color: $text_dark_color;
+          }
+        }
+
+        .second__line {
+          h1 {
+            color: $text_dark_color;
+          }
+        }
+      }
+
+      .hamburger {
+        .line {
+          background-color: $text_dark_color;
+        }
+      }
+
+      .nav-container {
+        a {
+          color: $text_dark_color;
+        }
+      }
+    }
+
+    .register-Orga-User-section {
+      .info_card {
+        h1 {
+          color: $text_dark_color;
+        }
+
+        p {
+          color: $text_dark_color;
+        }
+      }
+    }
+
+    .login-form {
+      .register {
+        a {
+          color: $text_dark_color;
+        }
+      }
+    }
+
+    main {
+      background-color: $bg_dark_color;
+      color: $text_dark_color;
+
+      .overview {
+
+        .gallery-card {
+          background-color: $bg_cards_dark_color;
+
+          .card-content {
+            .dateStart {
+              color: $text_dark_color;
+            }
+
+            .artists {
+              color: $text_dark_color;
+            }
+
+            .eventTitle {
+              color: $text_dark_color;
+            }
+
+            #venue {
+              color: $text_dark_color;
+            }
+
+          }
+        }
+      }
+
+      .pagination {
+        .MuiSvgIcon-root {
+          color: $text_dark_color;
+        }
+
+        .MuiButtonBase-root {
+          color: $text_dark_color;
+
+          &:hover {
+            background-color: $bg_dark_color_pagination;
+          }
+        }
+
+        .MuiPaginationItem-root {
+          color: $text_dark_color;
+
+        }
+      }
+
+      .myEvents {
+        table {
+          thead {
+            tr {
+              th {
+                background-color: $bg_dark_thead;
+                color: $text_dark_color;
+              }
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            background-color: $bg_cards_dark_color;
+
+            &:nth-child(odd) {
+              background-color: $bg_dark_tbody_odd;
+            }
+
+            &:nth-child(even) {
+              background-color: $bg_dark_tbody_even;
+            }
+
+            .button {
+              button {
+                color: $text_dark_color;
+                background-color: $bg_dark_button;
+                border: 1px solid $text_dark_border_color;
+              }
+            }
+          }
+
+        }
+      }
+
+      form {
+        label {
+          color: $text_dark_color;
+
+          input {
+            // color: $text_dark_color;
+            background: none;
+            color: #c0d3dd;
+          }
+        }
+      }
+    }
+
+    footer {
+      .contact-info {
+        span {
+          .namastech {
+            color: $text_dark_color;
+          }
+        }
+
+        ul {
+          li {
+
+            .kontakt,
+            .impressum,
+            .datenschutz {
+              color: $text_dark_color;
+            }
+          }
+        }
+      }
+
+      background-color: $bg_dark_color;
+      color: $text_dark_color;
+    }
+  }
+
+  body {
+    background-color: $bg_dark_color;
+    color: $text_dark_color;
+
+    .modal_filter {
+      background-color: $bg_dark_color;
+      color: $text_dark_color;
+
+      .close {
+        color: $text_dark_color;
+        background-color: $bg_dark_color;
+      }
+
+      div {
+        .react-datepicker {
+          background-color: $bg_dark_color;
+          color: $text_dark_color;
+
+          .react-datepicker__triangle {
+            background-color: $bg_dark_color;
+            color: $text_dark_color;
+          }
+
+          button {
+            color: $text_dark_color;
+            background-color: $bg_dark_color;
+
+            span::before {
+              border-color: $bg_calendar_dark_selected;
+            }
+          }
+
+          .react-datepicker__month-container {
+            background-color: $bg_dark_color;
+            color: $text_dark_color;
+
+            .react-datepicker__header {
+              background-color: $bg_dark_color;
+              color: $text_dark_color;
+
+              .react-datepicker__current-month {
+                background-color: $bg_dark_color;
+                color: $text_dark_color;
+              }
+
+              .react-datepicker__day-names {
+                background-color: $bg_dark_color;
+                color: $text_dark_color;
+
+                .react-datepicker__day-name {
+                  background-color: $bg_dark_color;
+                  color: $text_dark_color;
+                }
+              }
+            }
+
+            .react-datepicker__month {
+              background-color: $bg_dark_color;
+              color: $text_dark_color;
+
+              .react-datepicker__day {
+                //   background-color: $bg_dark_color;
+                color: $text_dark_color;
+
+                &:hover {
+                  background-color: $bg_calendar_dark_hover;
+                  color: $text_dark_color;
+                }
+
+                &--selected {
+                  background-color: $bg_calendar_dark_selected;
+                  color: $text_dark_color;
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      select {
+        color: $text_dark_color;
+        background-color: $bg_dark_color;
+      }
+
+      .modal_buttons {
+        button {
+          color: $text_dark_color;
+          background-color: $bg_dark_color;
+          border: 1px solid $text_dark_color;
+        }
+      }
+    }
+
+    .modal__nav {
+      background-color: $bg_dark_color;
+      color: $text_dark_color;
+
+      .hamburger__close {
+        .lines {
+          background-color: $text_dark_color;
+        }
+      }
+
+      .nav__links {
+        li {
+          a {
+            color: $text_dark_color;
+          }
+        }
+      }
+
+      .nav__footer {
+        li {
+          a {
+            color: $text_dark_color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  main {
+    div {
+      .gallery-card {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1279px) {
+  main {
+    div {
+      .gallery-card {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main {
+    div {
+      .gallery-card {
+        width: 30%;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../../styles/variables";
+
+
+.logout {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 30vh;
+
+    .logout_message {
+        text-align: center;
+        margin: 0 auto;
+        font-family: $main_font;
+        font-weight: 400;
+        
+    }
+}

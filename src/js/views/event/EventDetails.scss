@@ -1,0 +1,232 @@
+@import "../../../styles/variables";
+
+.event-details-container__section {
+    display: flex;
+    flex-direction: column;
+    // width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin: 1vw 3.8vw 1.5vw 4.1vw;
+    
+
+    .event-details-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        object-fit: contain;
+       
+
+        div.img-container {
+            display: flex;
+            width: 100%;
+            // height: 40vh;
+
+            .event-image {
+                // align-self: stretch;
+                object-fit: cover;
+                width: 100%;
+                // height: 500px;
+                background: linear-gradient(0deg, #DDE1E6 0%, #DDE1E6 100%)
+            }
+        }
+
+
+        .event-details__article {
+
+            min-height: fit-content;
+            border: 1px #DDE1E6 solid;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            display: inline-flex;
+
+
+            .event-details-content {
+
+                p#venue {
+                    margin: 0;
+                    height: 20.45px;
+                }
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                align-self: stretch;
+                padding-top: 24px;
+                padding-bottom: 16px;
+                padding-left: 16px;
+                padding-right: 16px;
+                gap: 16px;
+
+                .font-weight-bold {
+                    font-weight: bold;
+                }
+
+                .font-size-big {
+                    font-size: 2em;
+                }
+
+                // TODO: Falls spezielle Styles definiert werden sollen, die nur für das eine Text Feld gelten, dann über ID (#) stylen,
+                // ansonsten Klassen (.) verwenden für alles, was allgemein ist und mehrmals verwendet werden kann.
+
+
+                .date-and-time-container {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    pre.pipe {
+                        display: inline;
+                    }
+
+                    .hours-container,
+                    .dates-container {
+                        display: flex;
+                        align-items: center;
+
+                        .date-start_p,
+                        .date-end_p {
+                            width: 105px;
+                        }
+
+
+
+                        .date-start_input,
+                        .date-end_input {
+                            width: 120px;
+                            margin-right: 0;
+                        }
+                    }
+
+
+                }
+
+                .event-title-container {
+                    margin: 20px 0;
+                    width: 100%;
+
+                    h2 {
+                        display: inline;
+                    }
+
+                    #eventName_input {
+                        // height: 29.09px;
+                        font-size: 21px;
+                        width: 100%;
+                    }
+                }
+
+                div p#venue {
+                    font-weight: bold;                    
+                }
+
+                #event-homepage {
+                    display: flex;
+                    justify-content: end;
+                    width: 100%;
+
+                    a {
+                        padding: 6px 15px;
+                        border-radius: 8px;
+                        transition: 0.3s;
+                        text-decoration: none;
+                        color: #DDE1E6;
+                        background-color: $second_color;
+                        -webkit-border-radius: 8px;
+                        -moz-border-radius: 8px;
+                        -ms-border-radius: 8px;
+                        -o-border-radius: 8px;
+
+                        &:hover {
+                            background-color: $green;
+                            color: #000000;
+                            // transform: scaleX(1.1);
+                        }
+                    }
+
+                }
+
+
+
+                // #artist-info-container {
+
+                //     #artist-name {}
+
+                //     #artist-type {}
+
+                //     #artist-description {}
+
+                //     #artist-img {}
+                // }
+
+                #event-title {}
+
+                // #event-type {}
+
+                #event-category {}
+
+                #venue-info {
+                    #venue-name {
+                        font-weight: 600;
+                        margin-top: 30px;
+                    }
+
+                    #venue-type {}
+
+                    #venue-address-container {
+
+                        #additional-address-info {}
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 367px) {
+
+    .event-details-container__section .event-details-container .event-details__article .event-details-content pre.pipe {
+        display: none !important;
+    }
+
+    .date-and-time-container {
+        flex-wrap: nowrap;
+    }
+
+    .hours-container,
+    .dates-container {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .event-details-container__section {
+        display: flex;
+        flex-direction: column;
+
+
+        .event-details-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            div.img-container {
+                width: 100%;
+                // height: 60vh;
+            }
+
+            .event-details__article {
+                margin-left: 5em;
+            }
+        }
+    }
+
+
+}

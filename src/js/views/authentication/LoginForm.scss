@@ -1,0 +1,185 @@
+@import "../../../styles/variables";
+$bg-color: #424242;
+$hl-color: $green;
+$muted-color: #000;
+$trans-time: 300ms;
+
+
+.error {
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 1em 0;
+  height: 10%;
+  width: 100%;
+}
+
+.open {
+  display: block;
+
+}
+
+.close {
+  display: none;
+  height: 10%;
+  width: 100%;
+}
+
+.login-form {
+  max-width: 500px;
+  // display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: $text_color_light;
+    font-weight: 500;
+    margin-bottom: 0.3em;
+  }
+
+  .group {
+    width: 80%;
+    position: relative;
+    margin: 1em 1em;
+    align-items: center;
+  }
+
+  // INPUTS // ============================== //
+  .highlight {
+    display: block;
+    background-color: black;
+    color: $hl-color;
+    width: $inputWidth;
+    height: 2px;
+  }
+
+  input,
+  textarea {
+    // background: none;
+    // color: $muted-color;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: $inputWidth;
+    border: none;
+    border-radius: 0;
+    border-bottom: 0;
+
+    &:-internal-autofill-selected {
+      appearance: none;
+      background-color: #495a6a !important;
+      color: #000 !important;
+    }
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px #495a6a inset !important;
+      -webkit-text-fill-color: #000 !important;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus~label,
+    &:valid~label {
+      top: -14px;
+      font-size: 12px;
+      color: $hl-color;
+    }
+
+    &:focus~.bar:before {
+      width: $inputWidth;
+    }
+  }
+
+  input[type="password"] {
+    letter-spacing: 0.3em;
+  }
+
+  label {
+    color: $muted-color;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: $trans-time ease all;
+  }
+
+  .bar {
+    position: relative;
+    display: block;
+    width: $inputWidth;
+
+    &:before {
+      content: "";
+      height: 2px;
+      width: 0;
+      bottom: 0px;
+      position: absolute;
+      background: $hl-color;
+      transition: $trans-time ease all;
+      left: 0%;
+    }
+  }
+
+  button {
+    background-color: $green;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0 20px 0;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $green;
+    opacity: 0.6;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  bottom[disabled] {
+    cursor: not-allowed;
+  }
+
+  .register {
+    color: $hl-color;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 1em 0;
+
+    a {
+
+      color: #c0d3dd;
+      margin-left: 1em;
+      text-decoration: none;
+    }
+  }
+}
+
+// MEDIA QUERIES // ============================== //
+@media screen and (max-width: 768px) {
+  $inputWidth: 200px;
+
+  .login-form {
+    max-width: 355px;
+
+    button:disabled {
+      border: 2px solid red;
+      color: red;
+    }
+
+    bottom[disabled] {
+      border: 2px solid red;
+      color: red;
+    }
+  }
+}

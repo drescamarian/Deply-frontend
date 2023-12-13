@@ -1,0 +1,229 @@
+@import "./variables";
+
+main {
+  background-color: $bg_color;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg_color;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 3.8vw;
+    margin-top: -17px;
+
+    .first__line {
+      display: flex;
+      font-family: "Alumni Sans";
+      font-size: 5.1em;
+      letter-spacing: -6px;
+      gap: 0.45em;
+
+      span {
+        display: flex;
+        align-items: center;
+        color: $green;
+        border-radius: 50%;
+        background-color: $green;
+        padding: 0.6em 0.25em;
+        height: fit-content;
+        font-family: "Inter";
+        letter-spacing: -2px;
+        font-size: 0.3em;
+        font-weight: bold;
+        margin-top: 4rem;
+      }
+    }
+
+    .second__line {
+      display: flex;
+      align-self: start;
+      font-size: 5.1em;
+      letter-spacing: -6px;
+      margin-top: -35px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: left;
+    justify-content: flex-end;
+    margin-right: 3.8vw;
+    margin-top: -200px;
+    margin-bottom: 200px;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: 400;
+      color: black;
+      padding: 6px 15px;
+      height: fit-content;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background-color: $second_color;
+      color: $nav_font_hover;
+      opacity: 0.6;
+    }
+
+    a.active {
+      background-color: $second_color;
+      color: $nav_font_hover;
+    }
+
+    h3 {
+      font-size: 2em;
+      font-weight: bolder;
+      color: black;
+      border-color: #98ff1a;
+      padding: 10px;
+      height: fit-content;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .modal__nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .modal__nav {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg_color;
+
+    .hamburger__close {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 2em;
+      margin-top: 2em;
+
+      cursor: pointer;
+
+      .lines {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin: 5px;
+
+      }
+
+      .lines:nth-child(1) {
+        margin-right: -2.1em;
+        transform: rotate(45deg);
+        z-index: 1;
+      }
+
+      .lines:nth-child(2) {
+        transform: rotate(-45deg);
+        z-index: 2;
+      }
+
+
+    }
+
+    .nav__links {
+      width: 100%;
+      list-style: none;
+      margin: 1em 0 23em 0;
+
+      li {
+        width: 100%;
+        text-align: center;
+
+        a {
+          display: block;
+          width: 100%;
+          text-align: left;
+          color: black;
+          font-size: 1.5em;
+          padding: 8px;
+          margin-left: 1.5em;
+          font-weight: bold;
+        }
+      }
+
+      ;
+    }
+
+    .nav__footer {
+      width: 100%;
+      list-style: none;
+
+      li {
+        width: 100%;
+        text-align: center;
+
+        a {
+          display: block;
+          width: 100%;
+          text-align: left;
+          color: black;
+          font-size: 1.5em;
+          padding: 8px;
+          margin-left: 1.5em;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  header {
+
+    .logo {
+      .first__line {
+        font-size: 3.3em;
+        letter-spacing: -4px;
+
+        span {
+          margin-top: 4em;
+          margin-left: -0.4em;
+          font-size: 0.4em;
+          padding: 0.6em 0.3em;
+        }
+      }
+
+      .second__line {
+        font-size: 3.3em;
+        margin-top: -70px;
+        letter-spacing: -4px;
+      }
+    }
+
+    .nav-container {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+      position: fixed;
+      top: 1em;
+      right: 1em;
+
+      .line {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin: 5px;
+      }
+    }
+
+
+  }
+}

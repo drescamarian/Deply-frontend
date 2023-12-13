@@ -1,0 +1,65 @@
+@import "../../../styles/variables";
+
+.btn_filter {
+  position: absolute;
+  right: 3.8vw;
+  top: 14rem;
+  color: black;
+  font-family: $main_font;
+  font-size: 1.1em;
+  padding: 5px 15px;
+  background-color: $bg_color;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn_filter:hover {
+  background-color: $second_color;
+  border: 1px solid $second_color;
+  color: $nav_font_hover;
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.MuiPagination-ul {
+  justify-content: center;
+
+}
+
+@media screen and (max-width: 1024px) {
+  .btn_filter {
+    position: relative;
+    left: 1.1rem;
+    top: 0.7rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .gallery {
+    justify-content: start;
+
+    .gallery-card {
+      margin: 1rem 0;
+      padding: 0;
+      width: 100%;
+
+      .gallery-card-image {
+        border-radius: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../../styles/variables";
+
+.footer-container {
+  padding: 10px;
+  margin: auto;
+  padding: 2vw 4vw;
+  width: 100%;
+  background-color: $bg_color;
+
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    span {
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: flex-end;
+      gap: 35px;
+
+      .kontakt,
+      .impressum,
+      .datenschutz {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .kontakt,
+  .impressum,
+  .datenschutz {
+    display: none;
+  }
+
+  .contact-info {
+    margin: 40px 0 10px 0;
+  }
+}

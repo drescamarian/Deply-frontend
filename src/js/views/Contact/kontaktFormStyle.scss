@@ -1,0 +1,116 @@
+@import "../../../styles/_variables.scss";
+// $bg-color: #424242;
+$hl-color: $green;
+$muted-color: #000;
+$trans-time: 300ms;
+
+.KontaktForm-container {
+  form {
+    max-width: 500px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+
+    h2 {
+      color: #c0d3dd;
+      font-weight: 500;
+      margin-bottom: 0.3em;
+    }
+
+    .group {
+      width: 80%;
+      position: relative;
+      margin: 1em 1em;
+      align-items: center;
+
+      .text {
+        background-color: lightgray;
+      }
+
+      .highlight {
+        display: block;
+        width: 100%;
+        height: 2px;
+      }
+
+      .bar {
+        position: relative;
+        display: block;
+        width: $inputWidth;
+
+        &:before {
+          content: "";
+          height: 2px;
+          width: 0;
+          bottom: 0px;
+          position: absolute;
+          background: $hl-color;
+          transition: $trans-time ease all;
+          left: 0%;
+        }
+      }
+
+      input,
+      textarea {
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: $inputWidth;
+        border-radius: 0;
+        border-bottom: 0;
+
+
+        &:focus {
+          outline: none;
+          background: none;
+        }
+
+        &:focus~label,
+        &:valid~label {
+          top: -14px;
+          font-size: 12px;
+          color: $hl-color;
+        }
+
+        &:focus~.bar:before {
+          width: $inputWidth;
+        }
+      }
+    }
+
+    // INPUTS // ============================== //
+    input[type="password"] {
+      letter-spacing: 0.3em;
+    }
+
+    label {
+      color: #c0d3dd;
+      // color: $muted-color;
+      font-size: 16px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 10px;
+      transition: $trans-time ease all;
+    }
+
+
+
+    button {
+      background-color: $green;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: $green;
+      opacity: 0.6;
+    }
+  }
+}

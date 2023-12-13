@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Alumni Sans';
+    src: url('AlumniSans-Bold.eot');
+    src: url('AlumniSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('AlumniSans-Bold.woff2') format('woff2'),
+        url('AlumniSans-Bold.woff') format('woff'),
+        url('AlumniSans-Bold.ttf') format('truetype'),
+        url('AlumniSans-Bold.svg#AlumniSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
